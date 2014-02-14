@@ -1,0 +1,77 @@
+.home {
+  .nav-external {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+
+  .welcome {
+    display: table;
+    padding: 1em;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    h1,
+    h4 {
+      margin-bottom: 0;
+    }
+
+    .version {
+      font-size: em(12);
+    }
+
+    .btn-round {
+      bottom: 1em;
+      left: 50%;
+      margin-left: em(-24);
+      position: absolute;
+    }
+  }
+
+  .about {
+    padding: 6em 1em;
+    text-align: center;
+
+    .tools {
+      @extend .list-unstyled;
+      margin: 2.5em auto;
+      text-align: center;
+
+      > li {
+        display: inline-block;
+        padding: 0 2em;
+        position: relative;
+        vertical-align: middle;
+
+        &.plus {
+          color: $gray-lighter;
+          font-size: em(30);
+          padding: 0;
+        }
+      }
+
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    p {
+      margin-right: auto;
+      margin-left: auto
+    }
+  }
+
+
+  .usage {
+    background: $gray-lighter;
+    padding: 4em 1em;
+    text-align: center;
+
+    pre {
+      text-align: left;
+    }
+  }
+}

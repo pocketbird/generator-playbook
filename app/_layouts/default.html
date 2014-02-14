@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="A Yeoman generator for Jekyll and Bourbon.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Paytone+One|Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- build:css({app,.tmp}) /assets/css/main.css -->
+    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/syntax.css">
+    <link rel="stylesheet" href="/assets/css/screen.css">
+    <!-- endbuild -->
+  </head>
+
+  <body class="{{ page.class }}">
+    <nav id="nav-external" class="nav-external">
+      <ul class="wrap list-linear-pipes">
+        <li>
+          <a href="http://github.com/centresource/generator-playbook">GitHub</a>
+        </li>
+        <li>
+          <a href="http://centresource.com">Centresource Labs</a>
+        </li>
+      </ul>
+    </nav>
+
+    {{ content }}
+
+    <footer id="footer-primary" class="footer-primary">
+      <p class="flush-bottom">made by</p>
+      <a href="http://centresource.com" class="logo-cs-labs">Centresource Labs</a>
+    </footer>
+
+    {% include scripts.html %}
+    {% include google-analytics.html %}
+  </body>
+</html>
