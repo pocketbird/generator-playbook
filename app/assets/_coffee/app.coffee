@@ -17,6 +17,6 @@ CS.scrollToEl = (e) ->
   hash = $(e.currentTarget).attr('href')
   history.pushState(null, null, hash) if history.pushState
 
-  $('html').animate
+  $('html, body').animate
       scrollTop: $('#about').offset().top,
     2000
