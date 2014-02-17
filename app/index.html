@@ -12,7 +12,7 @@ class: 'home'
     <span class="version">Currently v1.0.4</span>
   </div>
 
-  <a href="#about" class="btn-round">
+  <a href="#about" id="go-to-about" class="btn-round">
     <i class="fa fa-chevron-down"></i>
   </a>
 </section>
@@ -37,17 +37,42 @@ class: 'home'
   </ul>
 
 
-  <p>Playbook is a Yeoman generator to get you building interfaces faster. <a href="http://jekyllrb.com/">Jekyll</a> is used for static site generation. <a href="http://bourbon.io/">Bourbon</a>, <a href="http://neat.bourbon.io/">Neat</a> &amp; <a href="http://bitters.bourbon.io/">Bitters</a> is included to help you write CSS faster.</p>
+  <p>Playbook is a Yeoman generator to get you building interfaces faster. <a href="http://jekyllrb.com/">Jekyll</a> is included for static site generation. <a href="http://bourbon.io/">Bourbon</a>, <a href="http://neat.bourbon.io/">Neat</a> &amp; <a href="http://bitters.bourbon.io/">Bitters</a> is included to help you write CSS faster.</p>
 </section>
 
 <section id="usage" class="usage">
-  <h3>Installation</h3>
-  <pre>
-    <code>npm install -g generator-playbook</code>
-  </pre>
+  <div class="instructions">
+    <h3>Prerequisites</h3>
+    <p>Playbook requires <a href="http://yeoman.io/">Yeoman</a>, <a href="https://www.ruby-lang.org/en/">Ruby</a> &amp; <a href="http://bundler.io/">Bundler</a>. If you are unfamiliar with Yeoman generators, we recommend <a href="http://yeoman.io/">familiarizing yourself</a> first.</p>
+  </div>
 
-  <h3>Usage</h3>
-  <pre>
-    <code>grunt serve</code>
-  </pre>
+  <div class="instructions">
+    <h3>Installation</h3>
+    <pre><code class="language-bash">npm install -g generator-playbook</code></pre>
+  </div>
+
+  <div class="instructions">
+    <h3>Usage</h3>
+    <pre><code class="language-bash">mkdir &amp;&amp; cd project-directory
+yo playbook</code></pre>
+  </div>
+
+  <div class="instructions">
+    <h3>Grunt Tasks</h3>
+
+    <h4>grunt serve</h4>
+    <p>Serve your site locally into your browser. LiveReload will automatically load any changes to HTML, CSS and JavaScript that you make.</p>
+
+    <h4>grunt check</h4>
+    <p>Check your the quality of your source with tools like <a href="http://www.jslint.com/">JSLint</a>, <a href="http://csslint.net/">CSSLint</a> and <a href="http://zmoazeni.github.io/csscss/">csscss</a>.</p>
+
+    <h4>grunt test</h4>
+    <p>Run any test that you have defined for your source.</p>
+
+    <h4>grunt build</h4>
+    <p>Build the concatenated, minified production version of the site into the <code>dist</code> directory.</p>
+
+    <h4>grunt deploy</h4>
+    <p>Deploy the production vesrsion of the site to <a href="http://pages.github.com/">GitHub Pages</a> or <a href="https://www.heroku.com/">Heroku</a>. This ability is available for configuration during playbook generation.</p>
+  </div>
 </section>

@@ -26,6 +26,11 @@
   @include outer-container;
 }
 
+.wrap-skinny {
+  margin: 0 auto;
+  max-width: em(600);
+}
+
 .nav-external {
   padding: 1em;
   text-align: center;

@@ -1,15 +1,9 @@
 .home {
-  .nav-external {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 100;
-  }
-
   .welcome {
+    color: $gray;
     display: table;
-    padding: 1em;
+    min-height: em(320);
+    padding: 1em 1em 5em 1em;
     position: relative;
     text-align: center;
     width: 100%;
@@ -17,6 +11,10 @@
     h1,
     h4 {
       margin-bottom: 0;
+    }
+
+    h4 {
+      color: $gray;
     }
 
     .version {
@@ -32,6 +30,8 @@
   }
 
   .about {
+    background: darken(white, 4);
+    color: darken($base-font-color, 20);
     padding: 6em 1em;
     text-align: center;
 
@@ -41,13 +41,31 @@
       text-align: center;
 
       > li {
-        display: inline-block;
-        padding: 0 2em;
+        display: block;
+        margin: 0.75em 0;
         position: relative;
         vertical-align: middle;
 
+        @include media($medium) {
+          display: inline-block;
+          margin: 0;
+          padding: 0 1em;
+        }
+
+        @include media($large) {
+          padding: 0 2em;
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+
         &.plus {
-          color: $gray-lighter;
+          color: $gray-light;
           font-size: em(30);
           padding: 0;
         }
@@ -66,12 +84,11 @@
 
 
   .usage {
-    background: $gray-lighter;
     padding: 4em 1em;
-    text-align: center;
 
-    pre {
-      text-align: left;
+    .instructions {
+      @extend .wrap-skinny;
+      margin-bottom: 4em;
     }
   }
 }

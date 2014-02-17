@@ -7,8 +7,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: $gray-darker;
   font-family: $header-font-family;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.25em;
   margin: 0 0 0.67em;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
@@ -17,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   color: $green-dark;
   font-family: $sans-serif-alt;
+  font-weight: 400;
   font-size: $base-font-size * 2.25; // 16 * 2.25 = 36px
 }
 
@@ -25,12 +27,13 @@ h2 {
 }
 
 h3 {
-  color: $gray-dark;
+
   font-size: $base-font-size * 1.5; // 16 * 1.5 = 24px
 }
 
 h4 {
   font-size: $base-font-size * 1.125; // 16 * 1.125 = 18px
+  font-weight: 400;
 }
 
 h5 {
@@ -43,12 +46,13 @@ h6 {
 
 p,
 pre {
-  margin: 0 auto ($base-line-height * .5);
+  margin: 0 auto 2em;
   max-width: 38rem;
 }
 
 a {
   color: $base-link-color;
+  text-decoration: none;
   @include transition(color $transition-duration linear);
 
   &:hover {
@@ -117,7 +121,9 @@ code {
 pre {
   background: white;
   border: 1px solid $base-border-color;
+  margin-bottom: 2em;
   padding: em(16);
+  overflow: auto;
 
   code {
     border: none;
@@ -134,5 +140,5 @@ pre {
 
 // Misc
 .mega {
-  font-size: em(48);
+  font-size: em(52);
 }

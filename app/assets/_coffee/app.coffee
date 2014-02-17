@@ -1,9 +1,22 @@
 @CS = {}
 
 $ ->
-  window.CS.welcomeHeight()
-  $(window).on('resize', window.CS.welcomeHeight)
+  $(window).on 'resize', window.CS.setWelcomeHeight
+  $('#go-to-about').click window.CS.scrollToEl
 
-CS.welcomeHeight = ->
-  wH = $(window).height()
-  $('#welcome').css('height', wH + 'px')
+CS.setWelcomeHeight = ->
+  wH = window.innerHeight
+  nH = document.getElementById('nav-external').clientHeight
+  autoHeight = (wH - nH) + 'px'
+  document.getElementById('welcome').style.height = autoHeight
+
+window.CS.setWelcomeHeight()
+
+CS.scrollToEl = (e) ->
+  e.preventDefault()
+  hash = $(e.currentTarget).attr('href')
+  history.pushState(null, null, hash) if history.pushState
+
+  $('html').animate
+      scrollTop: $('#about').offset().top,
+    2000
