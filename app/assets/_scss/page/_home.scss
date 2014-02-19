@@ -89,6 +89,10 @@
     .instructions {
       @extend .wrap-skinny;
       margin-bottom: 4em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
