@@ -5,7 +5,7 @@ $ ->
   $('#go-to-about').click window.CS.scrollToEl
 
   $release = $('#release')
-  request = $.get 'https://api.github.com/repos/centresource/generator-playbook/rseleases'
+  request = $.get 'https://api.github.com/repos/centresource/generator-playbook/releases'
   request.success (data) -> $release.html data[0]['name']
   request.error (jqXHR, textStatus, errorThrown) ->
     $release.html 'available on <a href="https://www.github.com/centresource/generator-playbook/releases">Github</a>'
